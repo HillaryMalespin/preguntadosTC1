@@ -1,0 +1,86 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Cambiar la fuente a algo más moderno */
+    background-color: #0d0b4d; /* Fondo oscuro para mayor contraste */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: #61dafb; /* Letra en color celeste */
+}
+
+h1, h2 {
+    color: #61dafb; /* Cambiar el color de los títulos */
+}
+
+button {
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+#feedback {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.correct {
+    color: green;
+    animation: correctHighlight 1s ease-in-out infinite alternate;
+}
+
+.incorrect {
+    color: red;
+    animation: incorrectHighlight 1s ease-in-out infinite alternate;
+}
+
+@keyframes correctHighlight {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+}
+
+@keyframes incorrectHighlight {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+}
+
+#result-text {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fade {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade.hide {
+    opacity: 0;
+}

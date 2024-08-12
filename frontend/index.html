@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos del documento -->
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres a UTF-8 para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que el contenido se adapte a la pantalla de los dispositivos móviles -->
+    <title>Preguntados App</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo de estilos CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Enlaza la fuente de Google Fonts -->
+</head>
+<body>
+    <div id="app">
+        <!-- Pantalla de inicio -->
+        <div id="start-screen">
+            <h1>Preguntados</h1> <!-- Título principal de la aplicación -->
+            <input type="text" id="player-name" placeholder="Ingrese su nombre"> <!-- Campo de texto para ingresar el nombre del jugador -->
+            <button id="start-game-button">Iniciar Partida</button> <!-- Botón para iniciar el juego -->
+        </div>
+
+        <!-- Pantalla de juego -->
+        <div id="game-screen" style="display: none;">
+            <h2 id="player-info"></h2> <!-- Muestra información del jugador (nombre, puntuación, etc.) -->
+            <div id="question-container"></div> <!-- Contenedor para mostrar las preguntas y respuestas -->
+            <div id="feedback" style="display: none;"></div> <!-- Contenedor para mostrar el feedback sobre la respuesta (correcta o incorrecta) -->
+            <button onclick="nextQuestion()">Siguiente Pregunta</button> <!-- Botón para avanzar a la siguiente pregunta -->
+        </div>
+
+        <!-- Pantalla de resultados -->
+        <div id="result-screen" style="display: none;">
+            <h2>Resultado</h2> <!-- Título de la pantalla de resultados -->
+            <p id="result-text"></p> <!-- Muestra el resultado de la partida (ganador/perdedor y detalles) -->
+            <button onclick="viewHistory()">Ver Historial</button> <!-- Botón para ver el historial de partidas -->
+            <button onclick="restartGame()">Reiniciar Partida</button> <!-- Botón para reiniciar el juego -->
+        </div>
+
+        <!-- Pantalla de historial -->
+        <div id="history-screen" style="display: none;">
+            <h2>Historial de Resultados</h2> <!-- Título de la pantalla de historial -->
+            <ul id="history-list"></ul> <!-- Lista para mostrar el historial de resultados de partidas -->
+            <button onclick="backToStart()">Volver al Inicio</button> <!-- Botón para volver a la pantalla de inicio -->
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Enlaza el archivo JavaScript con la lógica del juego -->
+</body>
+</html>
